@@ -20,6 +20,7 @@ app.all('/*', function(req, res, next) {
 
 
 app.all("*", function(request, response) {
+	console.log("starttime",new Date());
 	console.log("<<============= request received from outside=============>>");
 	console.log("body::", request.rawBody);
 	response.status(200).send("\n<============ok its working===========>\n");
